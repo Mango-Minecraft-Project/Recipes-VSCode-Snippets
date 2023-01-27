@@ -25,8 +25,7 @@
       "  \"cookingtime\": 100,",
       "  \"count\": 1",
       "}"
-    ],
-    "description": ""
+    ]
   },
   "Minecraft Recipes - minecraft:campfire_cooking": {
     "prefix": "mr.minecraft:campfire_cooking",
@@ -54,8 +53,7 @@
       "  \"cookingtime\": 100,",
       "  \"count\": 1",
       "}"
-    ],
-    "description": ""
+    ]
   },
   "Minecraft Recipes - minecraft:crafting_shaped": {
     "prefix": "mr.minecraft:crafting_shaped",
@@ -86,8 +84,7 @@
       "    \"count\": 1",
       "  }",
       "}"
-    ],
-    "description": ""
+    ]
   },
   "Minecraft Recipes - minecraft:crafting_shapeless": {
     "prefix": "mr.minecraft:crafting_shapeless",
@@ -117,8 +114,7 @@
       "    \"count\": 1",
       "  }",
       "}"
-    ],
-    "description": ""
+    ]
   },
   "Minecraft Recipes - minecraft:smelting": {
     "prefix": "mr.minecraft:smelting",
@@ -146,8 +142,7 @@
       "  \"cookingtime\": 200,",
       "  \"count\": 1",
       "}"
-    ],
-    "description": ""
+    ]
   },
   "Minecraft Recipes - minecraft:smithing": {
     "prefix": "mr.minecraft:smithing",
@@ -175,8 +170,7 @@
       "  },",
       "  \"result\": \"\"",
       "}"
-    ],
-    "description": ""
+    ]
   },
   "Minecraft Recipes - minecraft:smithing_transform": {
     "prefix": "mr.minecraft:smithing_transform",
@@ -210,8 +204,7 @@
       "    \"count\": 1",
       "  }",
       "}"
-    ],
-    "description": ""
+    ]
   },
   "Minecraft Recipes - minecraft:smithing_trim": {
     "prefix": "mr.minecraft:smithing_trim",
@@ -241,8 +234,7 @@
       "    \"item | tag\": \"\"",
       "  }",
       "}"
-    ],
-    "description": ""
+    ]
   },
   "Minecraft Recipes - minecraft:smoking": {
     "prefix": "mr.minecraft:smoking",
@@ -270,8 +262,7 @@
       "  \"cookingtime\": 100,",
       "  \"count\": 1",
       "}"
-    ],
-    "description": ""
+    ]
   },
   "Minecraft Recipes - minecraft:stonecutting": {
     "prefix": "mr.minecraft:stonecutting",
@@ -292,7 +283,6 @@
       "    }",
       "  ]",
       "}"
-    ],
-    "description": ""
+    ]
   }
 }

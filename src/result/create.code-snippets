@@ -32,8 +32,7 @@
       "  ],",
       "  \"headRequirement\": \"superheated | heated\"",
       "}"
-    ],
-    "description": ""
+    ]
   },
   "Minecraft Recipes - create:crushing": {
     "prefix": "mr.create:crushing",
@@ -68,8 +67,7 @@
       "  ],",
       "  \"processingTime\": 350",
       "}"
-    ],
-    "description": ""
+    ]
   },
   "Minecraft Recipes - create:cutting": {
     "prefix": "mr.create:cutting",
@@ -104,8 +102,7 @@
       "  ],",
       "  \"processingTime\": 50",
       "}"
-    ],
-    "description": ""
+    ]
   },
   "Minecraft Recipes - create:deploying": {
     "prefix": "mr.create:deploying",
@@ -139,8 +136,7 @@
       "    }",
       "  ]",
       "}"
-    ],
-    "description": ""
+    ]
   },
   "Minecraft Recipes - create:emptying": {
     "prefix": "mr.create:emptying",
@@ -173,8 +169,7 @@
       "    }",
       "  ]",
       "}"
-    ],
-    "description": ""
+    ]
   },
   "Minecraft Recipes - create:filling": {
     "prefix": "mr.create:filling",
@@ -208,8 +203,7 @@
       "    }",
       "  ]",
       "}"
-    ],
-    "description": ""
+    ]
   },
   "Minecraft Recipes - create:haunting": {
     "prefix": "mr.create:haunting",
@@ -243,8 +237,7 @@
       "    }",
       "  ]",
       "}"
-    ],
-    "description": ""
+    ]
   },
   "Minecraft Recipes - create:item_application": {
     "prefix": "mr.create:item_application",
@@ -278,8 +271,7 @@
       "    }",
       "  ]",
       "}"
-    ],
-    "description": ""
+    ]
   },
   "Minecraft Recipes - create:mechanical_crafting": {
     "prefix": "mr.create:mechanical_crafting",
@@ -306,8 +298,7 @@
       "  },",
       "  \"acceptMirrored\": false",
       "}"
-    ],
-    "description": ""
+    ]
   },
   "Minecraft Recipes - create:milling": {
     "prefix": "mr.create:milling",
@@ -342,8 +333,7 @@
       "  ],",
       "  \"processingTime\": 150",
       "}"
-    ],
-    "description": ""
+    ]
   },
   "Minecraft Recipes - create:mixing": {
     "prefix": "mr.create:mixing",
@@ -378,8 +368,7 @@
       "  ],",
       "  \"headRequirement\": \"superheated | heated\"",
       "}"
-    ],
-    "description": ""
+    ]
   },
   "Minecraft Recipes - create:pressing": {
     "prefix": "mr.create:pressing",
@@ -413,8 +402,7 @@
       "    }",
       "  ]",
       "}"
-    ],
-    "description": ""
+    ]
   },
   "Minecraft Recipes - create:sandpaper_polishing": {
     "prefix": "mr.create:sandpaper_polishing",
@@ -448,8 +436,7 @@
       "    }",
       "  ]",
       "}"
-    ],
-    "description": ""
+    ]
   },
   "Minecraft Recipes - create:sequenced_assembly": {
     "prefix": "mr.create:sequenced_assembly",
@@ -485,8 +472,7 @@
       "  \"results\": [],",
       "  \"loops\": 1",
       "}"
-    ],
-    "description": ""
+    ]
   },
   "Minecraft Recipes - create:splashing": {
     "prefix": "mr.create:splashing",
@@ -520,7 +506,6 @@
       "    }",
       "  ]",
       "}"
-    ],
-    "description": ""
+    ]
   }
 }

@@ -9,15 +9,6 @@ sort_keys = [
     "processingTime", "acceptMirrored", "loops", "headRequirement", "experience", "cookingtime", "count"
     ]
 
-def get_snippets_base(mod_id: str, type: str, body: list[str]):
-    return {
-        f"Minecraft Recipes - {mod_id}:{type}": {
-            "prefix": f"mr.{mod_id}:{type}",
-            "body": body,
-            "description": ""
-            }
-        }
-
 def get_json_data(subpath: str, path_base: str = 'data') -> dict:
     with open(f'./{path_base}/{subpath}') as file:
         return json.load(file)
@@ -42,7 +33,12 @@ def generate_snippet(mod_id: str, base_blacklist: list[str] = [], base_whitelist
         data = dict(sorted(data.items(), key=lambda x: sort_keys.index(x[0])))
         lines = [*json.dumps(data, indent=2).splitlines()]
         
-        snippet_base = get_snippets_base(mod_id, type, lines)
+        snippet_base = {
+            f"Minecraft Recipes - {mod_id}:{type}": {
+                "prefix": f"mr.{mod_id}:{type}",
+                "body": lines
+                }
+            }
         snippets |= snippet_base
     
     with open(f'./src/result/{mod_id}.code-snippets', 'w') as file:
@@ -67,8 +63,3 @@ process_data = {
 for mod_id, kwargs in process_data.items():
     generate_snippet(mod_id, **kwargs)
 snippets_mix(process_data.keys())
-
-# generate_snippet('create', base_blacklist=['mechanical_crafting', 'sequenced_assembly'])
-# generate_snippet('minecraft', base_whitelist=['blasting', 'campfire_cooking', 'smelting', 'smoking'])
-
-# snippets_mix(['create', 'minecraft'])

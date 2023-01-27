@@ -1,0 +1,17 @@
+{
+  "ingredient": {
+    "item | tag": ""
+  },
+  "transitionalItem": {
+    "item": ""
+  },
+  "sequence": [
+    {
+      "type": "create:",
+      "ingredients": [],
+      "results": []
+    }
+  ],
+  "results": [],
+  "loops": 1
+}

@@ -1,0 +1,16 @@
+{
+  "ingredients": [
+    {
+      "item | tag | fluid | fluidTag": "",
+      "count | amount": 1,
+      "return_chance": 1
+    }
+  ],
+  "results": [
+    {
+      "item | fluid": "",
+      "count": 1
+    }
+  ],
+  "headRequirement": "superheated | heated"
+}

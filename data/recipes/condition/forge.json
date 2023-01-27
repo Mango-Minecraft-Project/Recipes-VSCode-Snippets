@@ -1,0 +1,8 @@
+{
+  "forge:conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "mod_id": "create"
+    }
+  ]
+}

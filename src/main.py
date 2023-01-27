@@ -14,15 +14,15 @@ def get_json_data(subpath: str, path_base: str = 'data') -> dict:
         return json.load(file)
 
 def generate_snippet(mod_id: str, base_blacklist: list[str] = [], base_whitelist: list[str] = []) -> dict:
-    base = get_json_data(f'recipes/{mod_id}/base.json')
+    base = get_json_data(f'{mod_id}/base.json')
     
     conditions = {}
-    for condition in os.listdir(f'./data/recipes/condition'):
-        conditions |= get_json_data(f'recipes/condition/{condition}')
+    for condition in os.listdir(f'./data/condition'):
+        conditions |= get_json_data(f'condition/{condition}')
     
     snippets = {}
-    for type in os.listdir(f'./data/recipes/{mod_id}/type'):
-        data = get_json_data(f'recipes/{mod_id}/type/{type}')
+    for type in os.listdir(f'./data/{mod_id}/type'):
+        data = get_json_data(f'{mod_id}/type/{type}')
         
         type = type.removesuffix('.json')
         check = (type in base_whitelist or not base_whitelist) and type not in base_blacklist

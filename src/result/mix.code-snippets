@@ -254,7 +254,8 @@
       "  \"result\": \"\",",
       "  \"experience\": 1,",
       "  \"cookingtime\": 100,",
-      "  \"count\": 1",
+      "  \"count\": 1,",
+      "  \"show_notification\": true",
       "}"
     ]
   },
@@ -283,7 +284,8 @@
       "  \"result\": \"\",",
       "  \"experience\": 1,",
       "  \"cookingtime\": 100,",
-      "  \"count\": 1",
+      "  \"count\": 1,",
+      "  \"show_notification\": true",
       "}"
     ]
   },
@@ -311,7 +313,8 @@
       "  },",
       "  \"result\": \"\",",
       "  \"count\": 1,",
-      "  \"category\": \"???\"",
+      "  \"category\": \"???\",",
+      "  \"show_notification\": true",
       "}"
     ]
   },
@@ -403,7 +406,8 @@
       "  \"result\": \"\",",
       "  \"experience\": 1,",
       "  \"cookingtime\": 200,",
-      "  \"count\": 1",
+      "  \"count\": 1,",
+      "  \"show_notification\": true",
       "}"
     ]
   },
@@ -498,7 +502,8 @@
       "  \"result\": \"\",",
       "  \"experience\": 1,",
       "  \"cookingtime\": 100,",
-      "  \"count\": 1",
+      "  \"count\": 1,",
+      "  \"show_notification\": true",
       "}"
     ]
   },

@@ -7,7 +7,7 @@ sort_keys = [
     "type", "group",
     "ingredient", "ingredients", "pattern", "key", "transitionalItem", "sequence", "template", "base", "addition",
     "result", "results",
-    "processingTime", "acceptMirrored", "loops", "headRequirement", "experience", "cookingtime", "count", "category"
+    "processingTime", "acceptMirrored", "loops", "headRequirement", "experience", "cookingtime", "count", "category", "show_notification"
     ]
 
 with open('./data/namespace.toml', 'rb') as file:

@@ -3,5 +3,6 @@
     "item | tag": ""
   },
   "result": "",
-  "count": 1
+  "count": 1,
+  "show_notification": true
 }

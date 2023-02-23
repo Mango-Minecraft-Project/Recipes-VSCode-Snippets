@@ -287,6 +287,34 @@
       "}"
     ]
   },
+  "Minecraft Recipes - minecraft_1.20:crafting_decorated_pot": {
+    "prefix": "mr.minecraft_1.20:crafting_decorated_pot",
+    "body": [
+      "{",
+      "  \"forge:conditions\": [",
+      "    {",
+      "      \"type\": \"forge:mod_loaded\",",
+      "      \"mod_id\": \"create\"",
+      "    }",
+      "  ],",
+      "  \"fabric:load_conditions\": [",
+      "    {",
+      "      \"condition\": \"fabric:all_mods_loaded\",",
+      "      \"values\": [",
+      "        \"create\"",
+      "      ]",
+      "    }",
+      "  ],",
+      "  \"type\": \"minecraft:crafting_decorated_pot\",",
+      "  \"ingredient\": {",
+      "    \"item | tag\": \"\"",
+      "  },",
+      "  \"result\": \"\",",
+      "  \"count\": 1,",
+      "  \"category\": \"???\"",
+      "}"
+    ]
+  },
   "Minecraft Recipes - minecraft_1.20:crafting_shaped": {
     "prefix": "mr.minecraft_1.20:crafting_shaped",
     "body": [

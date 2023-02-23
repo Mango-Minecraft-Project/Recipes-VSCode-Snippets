@@ -7,7 +7,7 @@ sort_keys = [
     "type", "group",
     "ingredient", "ingredients", "pattern", "key", "transitionalItem", "sequence", "template", "base", "addition",
     "result", "results",
-    "processingTime", "acceptMirrored", "loops", "headRequirement", "experience", "cookingtime", "count"
+    "processingTime", "acceptMirrored", "loops", "headRequirement", "experience", "cookingtime", "count", "category"
     ]
 
 with open('./data/namespace.toml', 'rb') as file:
@@ -70,7 +70,7 @@ process_data = {
         'base_whitelist': ['blasting', 'campfire_cooking', 'smelting', 'smoking']
         },
     'minecraft_1.20': {
-        'base_whitelist': ['blasting', 'campfire_cooking', 'smelting', 'smoking']
+        'base_whitelist': ['blasting', 'campfire_cooking', 'smelting', 'smoking', 'crafting_decorated_pot']
         },
     'create': {
         'base_blacklist': ['mechanical_crafting', 'sequenced_assembly']

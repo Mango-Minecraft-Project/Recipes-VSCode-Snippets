@@ -1,5 +1,6 @@
 import json
 import os
+import tomllib
 
 sort_keys = [
     "forge:conditions", "fabric:load_conditions",
@@ -9,12 +10,16 @@ sort_keys = [
     "processingTime", "acceptMirrored", "loops", "headRequirement", "experience", "cookingtime", "count"
     ]
 
+with open('./data/namespace.toml', 'rb') as file:
+    mod_id_data = tomllib.load(file)
+
 def get_json_data(subpath: str, path_base: str = 'data') -> dict:
     with open(f'./{path_base}/{subpath}') as file:
         return json.load(file)
 
 def generate_snippet(mod_id: str, base_blacklist: list[str] = [], base_whitelist: list[str] = []) -> dict:
     base = get_json_data(f'{mod_id}/base.json')
+    _mod_id = mod_id_data[mod_id]
     
     conditions = {}
     for condition in os.listdir(f'./data/condition'):
@@ -30,15 +35,23 @@ def generate_snippet(mod_id: str, base_blacklist: list[str] = [], base_whitelist
             data = base | data
         data |= conditions
         
+        data['type'] = f'{_mod_id}:{type}'
         data = dict(sorted(data.items(), key=lambda x: sort_keys.index(x[0])))
         lines = [*json.dumps(data, indent=2).splitlines()]
-        
+
         snippet_base = {
             f"Minecraft Recipes - {mod_id}:{type}": {
                 "prefix": f"mr.{mod_id}:{type}",
                 "body": lines
                 }
             }
+        
+        # snippet_base = {
+        #     f"Minecraft Recipes - {_mod_id}:{type}": {
+        #         "prefix": f"mr.{_mod_id}:{type}",
+        #         "body": lines
+        #         }
+        #     }
         snippets |= snippet_base
     
     with open(f'./src/result/{mod_id}.code-snippets', 'w') as file:
@@ -53,7 +66,10 @@ def snippets_mix(names: list[str]):
         json.dump(snippets, file, indent=2)
 
 process_data = {
-    'minecraft': {
+    'minecraft_1.19': {
+        'base_whitelist': ['blasting', 'campfire_cooking', 'smelting', 'smoking']
+        },
+    'minecraft_1.20': {
         'base_whitelist': ['blasting', 'campfire_cooking', 'smelting', 'smoking']
         },
     'create': {

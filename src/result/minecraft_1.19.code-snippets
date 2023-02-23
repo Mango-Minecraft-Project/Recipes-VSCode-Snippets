@@ -1,6 +1,6 @@
 {
-  "Minecraft Recipes - minecraft:blasting": {
-    "prefix": "mr.minecraft:blasting",
+  "Minecraft Recipes - minecraft_1.19:blasting": {
+    "prefix": "mr.minecraft_1.19:blasting",
     "body": [
       "{",
       "  \"forge:conditions\": [",
@@ -17,6 +17,7 @@
       "      ]",
       "    }",
       "  ],",
+      "  \"type\": \"minecraft:blasting\",",
       "  \"ingredient\": {",
       "    \"item | tag\": \"\"",
       "  },",
@@ -27,8 +28,8 @@
       "}"
     ]
   },
-  "Minecraft Recipes - minecraft:campfire_cooking": {
-    "prefix": "mr.minecraft:campfire_cooking",
+  "Minecraft Recipes - minecraft_1.19:campfire_cooking": {
+    "prefix": "mr.minecraft_1.19:campfire_cooking",
     "body": [
       "{",
       "  \"forge:conditions\": [",
@@ -45,6 +46,7 @@
       "      ]",
       "    }",
       "  ],",
+      "  \"type\": \"minecraft:campfire_cooking\",",
       "  \"ingredient\": {",
       "    \"item | tag\": \"\"",
       "  },",
@@ -55,8 +57,8 @@
       "}"
     ]
   },
-  "Minecraft Recipes - minecraft:crafting_shaped": {
-    "prefix": "mr.minecraft:crafting_shaped",
+  "Minecraft Recipes - minecraft_1.19:crafting_shaped": {
+    "prefix": "mr.minecraft_1.19:crafting_shaped",
     "body": [
       "{",
       "  \"forge:conditions\": [",
@@ -73,6 +75,7 @@
       "      ]",
       "    }",
       "  ],",
+      "  \"type\": \"minecraft:crafting_shaped\",",
       "  \"pattern\": [],",
       "  \"key\": {",
       "    \"*\": {",
@@ -86,8 +89,8 @@
       "}"
     ]
   },
-  "Minecraft Recipes - minecraft:crafting_shapeless": {
-    "prefix": "mr.minecraft:crafting_shapeless",
+  "Minecraft Recipes - minecraft_1.19:crafting_shapeless": {
+    "prefix": "mr.minecraft_1.19:crafting_shapeless",
     "body": [
       "{",
       "  \"forge:conditions\": [",
@@ -104,6 +107,7 @@
       "      ]",
       "    }",
       "  ],",
+      "  \"type\": \"minecraft:crafting_shapeless\",",
       "  \"ingredients\": [",
       "    {",
       "      \"item | tag\": \"\"",
@@ -116,8 +120,8 @@
       "}"
     ]
   },
-  "Minecraft Recipes - minecraft:smelting": {
-    "prefix": "mr.minecraft:smelting",
+  "Minecraft Recipes - minecraft_1.19:smelting": {
+    "prefix": "mr.minecraft_1.19:smelting",
     "body": [
       "{",
       "  \"forge:conditions\": [",
@@ -134,6 +138,7 @@
       "      ]",
       "    }",
       "  ],",
+      "  \"type\": \"minecraft:smelting\",",
       "  \"ingredient\": {",
       "    \"item | tag\": \"\"",
       "  },",
@@ -144,8 +149,8 @@
       "}"
     ]
   },
-  "Minecraft Recipes - minecraft:smithing": {
-    "prefix": "mr.minecraft:smithing",
+  "Minecraft Recipes - minecraft_1.19:smithing": {
+    "prefix": "mr.minecraft_1.19:smithing",
     "body": [
       "{",
       "  \"forge:conditions\": [",
@@ -162,6 +167,7 @@
       "      ]",
       "    }",
       "  ],",
+      "  \"type\": \"minecraft:smithing\",",
       "  \"base\": {",
       "    \"item | tag\": \"\"",
       "  },",
@@ -172,8 +178,8 @@
       "}"
     ]
   },
-  "Minecraft Recipes - minecraft:smithing_transform": {
-    "prefix": "mr.minecraft:smithing_transform",
+  "Minecraft Recipes - minecraft_1.19:smoking": {
+    "prefix": "mr.minecraft_1.19:smoking",
     "body": [
       "{",
       "  \"forge:conditions\": [",
@@ -190,70 +196,7 @@
       "      ]",
       "    }",
       "  ],",
-      "  \"template\": {",
-      "    \"item | tag\": \"\"",
-      "  },",
-      "  \"base\": {",
-      "    \"item | tag\": \"\"",
-      "  },",
-      "  \"addition\": {",
-      "    \"item | tag\": \"\"",
-      "  },",
-      "  \"result\": {",
-      "    \"item\": \"\",",
-      "    \"count\": 1",
-      "  }",
-      "}"
-    ]
-  },
-  "Minecraft Recipes - minecraft:smithing_trim": {
-    "prefix": "mr.minecraft:smithing_trim",
-    "body": [
-      "{",
-      "  \"forge:conditions\": [",
-      "    {",
-      "      \"type\": \"forge:mod_loaded\",",
-      "      \"mod_id\": \"create\"",
-      "    }",
-      "  ],",
-      "  \"fabric:load_conditions\": [",
-      "    {",
-      "      \"condition\": \"fabric:all_mods_loaded\",",
-      "      \"values\": [",
-      "        \"create\"",
-      "      ]",
-      "    }",
-      "  ],",
-      "  \"template\": {",
-      "    \"item | tag\": \"\"",
-      "  },",
-      "  \"base\": {",
-      "    \"item | tag\": \"\"",
-      "  },",
-      "  \"addition\": {",
-      "    \"item | tag\": \"\"",
-      "  }",
-      "}"
-    ]
-  },
-  "Minecraft Recipes - minecraft:smoking": {
-    "prefix": "mr.minecraft:smoking",
-    "body": [
-      "{",
-      "  \"forge:conditions\": [",
-      "    {",
-      "      \"type\": \"forge:mod_loaded\",",
-      "      \"mod_id\": \"create\"",
-      "    }",
-      "  ],",
-      "  \"fabric:load_conditions\": [",
-      "    {",
-      "      \"condition\": \"fabric:all_mods_loaded\",",
-      "      \"values\": [",
-      "        \"create\"",
-      "      ]",
-      "    }",
-      "  ],",
+      "  \"type\": \"minecraft:smoking\",",
       "  \"ingredient\": {",
       "    \"item | tag\": \"\"",
       "  },",
@@ -264,8 +207,8 @@
       "}"
     ]
   },
-  "Minecraft Recipes - minecraft:stonecutting": {
-    "prefix": "mr.minecraft:stonecutting",
+  "Minecraft Recipes - minecraft_1.19:stonecutting": {
+    "prefix": "mr.minecraft_1.19:stonecutting",
     "body": [
       "{",
       "  \"forge:conditions\": [",
@@ -281,7 +224,8 @@
       "        \"create\"",
       "      ]",
       "    }",
-      "  ]",
+      "  ],",
+      "  \"type\": \"minecraft:stonecutting\"",
       "}"
     ]
   }

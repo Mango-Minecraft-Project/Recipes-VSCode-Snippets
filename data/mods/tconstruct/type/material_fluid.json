@@ -1,0 +1,9 @@
+{
+  "output": "(must in /MaterialId)",
+  "fluid": {
+    "name | tag": "",
+    "amount": 125
+  },
+  "input": "(must in /MaterialId)",
+  "temperature": 0
+}

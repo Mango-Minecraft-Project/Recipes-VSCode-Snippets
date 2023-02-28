@@ -1,0 +1,13 @@
+{
+  "cast": {
+    "item | tag": ""
+  },
+  "cast_consumed": false,
+  "fluid": {
+    "name | tag": "",
+    "amount": 125
+  },
+  "result": "",
+  "switch_slots": false,
+  "cooling_time": 1
+}

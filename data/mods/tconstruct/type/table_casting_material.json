@@ -1,0 +1,9 @@
+{
+  "item_cost": 1,
+  "cast": {
+    "item | tag": ""
+  },
+  "cast_consumed": false,
+  "result": "(must #IMaterialItem)",
+  "switch_slots": false
+}

@@ -31,7 +31,7 @@
       "      \"chance\": 1",
       "    }",
       "  ],",
-      "  \"headRequirement\": \"superheated | heated\"",
+      "  \"heatRequirement\": \"superheated | heated\"",
       "}"
     ]
   },
@@ -377,7 +377,7 @@
       "      \"count\": 1",
       "    }",
       "  ],",
-      "  \"headRequirement\": \"superheated | heated\"",
+      "  \"heatRequirement\": \"superheated | heated\"",
       "}"
     ]
   },

@@ -22,9 +22,9 @@
       "    \"item | tag\": \"\"",
       "  },",
       "  \"result\": \"\",",
+      "  \"count\": 1,",
       "  \"experience\": 1,",
       "  \"cookingtime\": 100,",
-      "  \"count\": 1,",
       "  \"show_notification\": true",
       "}"
     ]
@@ -52,9 +52,9 @@
       "    \"item | tag\": \"\"",
       "  },",
       "  \"result\": \"\",",
+      "  \"count\": 1,",
       "  \"experience\": 1,",
       "  \"cookingtime\": 100,",
-      "  \"count\": 1,",
       "  \"show_notification\": true",
       "}"
     ]
@@ -107,6 +107,9 @@
       "    }",
       "  ],",
       "  \"type\": \"minecraft:crafting_shaped\",",
+      "  \"ingredient\": {",
+      "    \"item | tag\": \"\"",
+      "  },",
       "  \"pattern\": [],",
       "  \"key\": {",
       "    \"*\": {",
@@ -116,7 +119,9 @@
       "  \"result\": {",
       "    \"item\": \"\",",
       "    \"count\": 1",
-      "  }",
+      "  },",
+      "  \"count\": 1,",
+      "  \"show_notification\": true",
       "}"
     ]
   },
@@ -139,6 +144,9 @@
       "    }",
       "  ],",
       "  \"type\": \"minecraft:crafting_shapeless\",",
+      "  \"ingredient\": {",
+      "    \"item | tag\": \"\"",
+      "  },",
       "  \"ingredients\": [",
       "    {",
       "      \"item | tag\": \"\"",
@@ -147,7 +155,9 @@
       "  \"result\": {",
       "    \"item\": \"\",",
       "    \"count\": 1",
-      "  }",
+      "  },",
+      "  \"count\": 1,",
+      "  \"show_notification\": true",
       "}"
     ]
   },
@@ -174,9 +184,9 @@
       "    \"item | tag\": \"\"",
       "  },",
       "  \"result\": \"\",",
+      "  \"count\": 1,",
       "  \"experience\": 1,",
       "  \"cookingtime\": 200,",
-      "  \"count\": 1,",
       "  \"show_notification\": true",
       "}"
     ]
@@ -200,6 +210,9 @@
       "    }",
       "  ],",
       "  \"type\": \"minecraft:smithing_transform\",",
+      "  \"ingredient\": {",
+      "    \"item | tag\": \"\"",
+      "  },",
       "  \"template\": {",
       "    \"item | tag\": \"\"",
       "  },",
@@ -212,7 +225,9 @@
       "  \"result\": {",
       "    \"item\": \"\",",
       "    \"count\": 1",
-      "  }",
+      "  },",
+      "  \"count\": 1,",
+      "  \"show_notification\": true",
       "}"
     ]
   },
@@ -235,6 +250,9 @@
       "    }",
       "  ],",
       "  \"type\": \"minecraft:smithing_trim\",",
+      "  \"ingredient\": {",
+      "    \"item | tag\": \"\"",
+      "  },",
       "  \"template\": {",
       "    \"item | tag\": \"\"",
       "  },",
@@ -243,7 +261,10 @@
       "  },",
       "  \"addition\": {",
       "    \"item | tag\": \"\"",
-      "  }",
+      "  },",
+      "  \"result\": \"\",",
+      "  \"count\": 1,",
+      "  \"show_notification\": true",
       "}"
     ]
   },
@@ -270,9 +291,9 @@
       "    \"item | tag\": \"\"",
       "  },",
       "  \"result\": \"\",",
+      "  \"count\": 1,",
       "  \"experience\": 1,",
       "  \"cookingtime\": 100,",
-      "  \"count\": 1,",
       "  \"show_notification\": true",
       "}"
     ]
@@ -295,7 +316,13 @@
       "      ]",
       "    }",
       "  ],",
-      "  \"type\": \"minecraft:stonecutting\"",
+      "  \"type\": \"minecraft:stonecutting\",",
+      "  \"ingredient\": {",
+      "    \"item | tag\": \"\"",
+      "  },",
+      "  \"result\": \"\",",
+      "  \"count\": 1,",
+      "  \"show_notification\": true",
       "}"
     ]
   }

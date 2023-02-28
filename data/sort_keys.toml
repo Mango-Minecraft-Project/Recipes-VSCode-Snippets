@@ -1,0 +1,42 @@
+"general" = [
+  "forge:conditions",
+  "fabric:load_conditions",
+  "type",
+  "group"
+]
+"minecraft" = [
+  "ingredient",
+  "ingredients",
+  "pattern",
+  "key",
+  "template",
+  "base",
+  "addition",
+
+  "result",
+  "count",
+
+  "experience",
+  "cookingtime",
+  "category",
+  "show_notification"
+]
+"create" = [
+  "ingredient",
+  "ingredients",
+  "pattern",
+  "key",
+  "transitionalItem",
+  "sequence",
+  
+  "result",
+  "results",
+
+  "heatRequirement",
+  "processingTime",
+  "acceptMirrored",
+  "loops"
+]
+"tconstruct" = [
+
+]

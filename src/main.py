@@ -1,81 +1,63 @@
 import json
-import os
 import tomllib
+import os
 
-sort_keys = [
-    "forge:conditions", "fabric:load_conditions",
-    "type", "group",
-    "ingredient", "ingredients", "pattern", "key", "transitionalItem", "sequence", "template", "base", "addition",
-    "result", "results",
-    "processingTime", "acceptMirrored", "loops", "headRequirement", "experience", "cookingtime", "count", "category", "show_notification"
-    ]
 
+CONDITION_DATA: dict[str, dict] = {}
+for filename in os.listdir('./data/condition'):
+    with open(f'./data/condition/{filename}') as file:
+        CONDITION_DATA |= json.load(file)
 with open('./data/namespace.toml', 'rb') as file:
-    mod_id_data = tomllib.load(file)
+    NAMESPACE_DATA: dict[str, str] = tomllib.load(file)
+with open('./data/sort_keys.toml', 'rb') as file:
+    SORT_KEYS_DATA: dict[str, dict] = tomllib.load(file)
+with open('./data/base_usage.toml', 'rb') as file:
+    BASE_USAGE_DATA: dict[str, dict[str, list]] = tomllib.load(file)
 
-def get_json_data(subpath: str, path_base: str = 'data') -> dict:
-    with open(f'./{path_base}/{subpath}') as file:
-        return json.load(file)
 
-def generate_snippet(mod_id: str, base_blacklist: list[str] = [], base_whitelist: list[str] = []) -> dict:
-    base = get_json_data(f'{mod_id}/base.json')
-    _mod_id = mod_id_data[mod_id]
-    
-    conditions = {}
-    for condition in os.listdir(f'./data/condition'):
-        conditions |= get_json_data(f'condition/{condition}')
-    
-    snippets = {}
-    for type in os.listdir(f'./data/{mod_id}/type'):
-        data = get_json_data(f'{mod_id}/type/{type}')
+class CodeSnippetsGenerator:
+    def __init__(self, folder_name: str) -> None:
+        self.folder_name = folder_name
+        mod_id = NAMESPACE_DATA[folder_name]
+        self.sort_keys = SORT_KEYS_DATA['general'] + SORT_KEYS_DATA[mod_id]
         
-        type = type.removesuffix('.json')
-        check = (type in base_whitelist or not base_whitelist) and type not in base_blacklist
-        if check:
-            data = base | data
-        data |= conditions
+        with open(f'./data/mods/{folder_name}/base.json') as file:
+            base_data = json.load(file)
+        base_blacklist = BASE_USAGE_DATA[folder_name].setdefault('blacklist', [])
         
-        data['type'] = f'{_mod_id}:{type}'
-        data = dict(sorted(data.items(), key=lambda x: sort_keys.index(x[0])))
-        lines = [*json.dumps(data, indent=2).splitlines()]
+        self.code_snippets = {}
+        for file_name in os.listdir(f'./data/mods/{folder_name}/type'):
+            recipe_type = file_name.removesuffix('.json')
+            
+            with open(f'./data/mods/{self.folder_name}/type/{file_name}') as file:
+                data = json.load(file)
+            
+            if recipe_type not in base_blacklist:
+                data = base_data | data
+            data |= CONDITION_DATA | {'type': f'{mod_id}:{recipe_type}'}
+            
+            data = self.dict_sort(object=data)
+            self.code_snippets |= self.generate_code_snippet(recipe_type=file_name, content=data)
 
-        snippet_base = {
-            f"Minecraft Recipes - {mod_id}:{type}": {
-                "prefix": f"mr.{mod_id}:{type}",
-                "body": lines
-                }
+    
+    def generate_code_snippet(self, recipe_type: str, content: dict) -> dict:
+        recipe_type = recipe_type.removesuffix('.json')
+        return {
+            f'Minecraft Recipes - {self.folder_name}:{recipe_type}': {
+                'prefix': f'mr.{self.folder_name}:{recipe_type}',
+                'body': json.dumps(content, ensure_ascii=False, indent=2).splitlines()
             }
-        
-        # snippet_base = {
-        #     f"Minecraft Recipes - {_mod_id}:{type}": {
-        #         "prefix": f"mr.{_mod_id}:{type}",
-        #         "body": lines
-        #         }
-        #     }
-        snippets |= snippet_base
-    
-    with open(f'./src/result/{mod_id}.code-snippets', 'w') as file:
-        json.dump(snippets, file, indent=2)
-    return snippets
-
-def snippets_mix(names: list[str]):
-    snippets = {}
-    for name in names:
-        snippets |= get_json_data(f'result/{name}.code-snippets', 'src')
-    with open('./src/result/mix.code-snippets', 'w') as file:
-        json.dump(snippets, file, indent=2)
-
-process_data = {
-    'minecraft_1.19': {
-        'base_whitelist': ['blasting', 'campfire_cooking', 'smelting', 'smoking']
-        },
-    'minecraft_1.20': {
-        'base_whitelist': ['blasting', 'campfire_cooking', 'smelting', 'smoking', 'crafting_decorated_pot']
-        },
-    'create': {
-        'base_blacklist': ['mechanical_crafting', 'sequenced_assembly']
         }
-    }
-for mod_id, kwargs in process_data.items():
-    generate_snippet(mod_id, **kwargs)
-snippets_mix(process_data.keys())
+
+    def dict_sort(self, object: dict) -> dict:
+        return dict(sorted(object.items(), key=lambda x: self.sort_keys.index(x[0])))
+
+
+if __name__ == '__main__':
+    generator_blacklist = ['tconstruct']
+    for folder_name in os.listdir('./data/mods'):
+        if folder_name in generator_blacklist:
+            continue
+        generator = CodeSnippetsGenerator(folder_name)    
+        with open(f'./src/result/{folder_name}.code-snippets', 'w') as file:
+            json.dump(generator.code_snippets, file, indent=2)

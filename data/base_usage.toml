@@ -1,0 +1,8 @@
+['minecraft_1.19']
+'whitelist' = ['blasting', 'campfire_cooking', 'smelting', 'smoking', 'stonecutting']
+
+['minecraft_1.20']
+'whitelist' = ['blasting', 'campfire_cooking', 'smelting', 'smoking', 'stonecutting', 'crafting_decorated_pot']
+
+['create']
+'blacklist' = ['mechanical_crafting', 'sequenced_assembly']

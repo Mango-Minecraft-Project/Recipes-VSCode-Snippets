@@ -1,5 +1,11 @@
 {
-    "cSpell.words": [
-        "cookingtime"
-    ]
+  "cSpell.words": [
+    "cookingtime",
+    "tconstruct"
+  ],
+  "editor.tabSize": 2,
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  }
 }

@@ -5,5 +5,5 @@
       "count | amount": 1
     }
   ],
-  "headRequirement": "superheated | heated"
+  "heatRequirement": "superheated | heated"
 }
